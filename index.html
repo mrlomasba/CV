@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Edgar Humberto Balleza Lomas (Futurista)</title>
+    <link rel="icon" href="logo.ico">
+    <!-- Carga de Tailwind CSS para un estilo moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Definición de colores y fuentes para el estilo futurista (Neon Digital) */
+        :root {
+            --primary-color: #00f0ff; /* Azul Eléctrico Neon */
+            --bg-dark: #0a0f18; /* Negro/Azul muy Oscuro */
+            --bg-medium: #111a27; /* Fondo de secciones */
+            --text-light: #e0f7fa; /* Texto blanco azulado */
+            --secondary-accent: #fcd34d; /* Amarillo para Industrial */
+            --glow-shadow: 0 0 10px rgba(0, 240, 255, 0.4); /* Sombra de brillo para elementos clave */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            transition: background-color 0.5s;
+        }
+        .header-bg {
+            background-color: var(--bg-medium);
+            border-bottom: 2px solid var(--primary-color);
+        }
+        .accent-text {
+            color: var(--primary-color);
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.5); /* Efecto de brillo en texto */
+        }
+        .industrial-text {
+            color: var(--secondary-accent);
+            text-shadow: 0 0 5px rgba(252, 211, 77, 0.3);
+        }
+        .section-title {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 0.75rem;
+            font-family: 'Space Mono', monospace;
+            text-transform: uppercase;
+            box-shadow: var(--glow-shadow);
+        }
+        /* Contenedor principal con sombra intensa para efecto flotante */
+        .cv-container {
+            max-width: 1000px;
+            background-color: var(--bg-medium);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.15), 0 20px 25px -5px rgba(0, 0, 0, 0.8);
+        }
+        /* Estilo para iconos/etiquetas de dualidad */
+        .dual-tag {
+            font-family: 'Space Mono', monospace;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .web-tag {
+            background-color: rgba(0, 240, 255, 0.2); /* Azul Eléctrico semi-transparente */
+            color: var(--primary-color);
+        }
+        .mech-tag {
+            background-color: rgba(251, 191, 36, 0.2); /* Amarillo semi-transparente */
+            color: var(--secondary-accent);
+        }
+        /* Elementos de experiencia con borde de brillo */
+        .experience-card {
+            background-color: #0d131f; /* Un tono más oscuro para las tarjetas de contenido */
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+        .experience-card:hover {
+            border: 1px solid var(--primary-color);
+            box-shadow: var(--glow-shadow);
+        }
+        
+        /* Eliminamos el background-image del CSS ya que usaremos la etiqueta <img> */
+        #avatar-placeholder {
+            background-color: #1f2937; /* Color de fondo sólido si la imagen tarda en cargar */
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 flex justify-center">
+
+    <div id="cv-content" class="cv-container rounded-xl overflow-hidden w-full">
+
+        <!-- HEADER (Cabecera) -->
+        <header class="header-bg p-6 sm:p-10 relative">
+            <div class="flex flex-col lg:flex-row items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-6">
+                
+                <!-- ESPACIO CIRCULAR PARA IMAGEN -->
+                <!-- TAMAÑO DUPLICADO: w-64 h-64 (16rem) en móvil, sm:w-72 sm:h-72 (18rem) en escritorio -->
+                <div id="avatar-placeholder" 
+                    class="w-64 h-64 sm:w-72 sm:h-72 rounded-full border-4 border-primary-color flex-shrink-0 overflow-hidden"
+                    style="box-shadow: var(--glow-shadow);">
+                    <!-- 
+                        IMAGEN.
+                        Clases clave:
+                        - w-full h-full: Para que la imagen ocupe todo el DIV contenedor.
+                        - object-cover: Asegura que la imagen no se distorsione y cubra todo el espacio, cortando los excesos si es necesario.
+                    -->
+                    <img src="pic.png" >
+
+                    <img 
+                        src="https://placehold.co/288x288/1f2937/00f0ff?text=TU+FOTO" 
+                        alt="Foto de Perfil de David R. Gómez"
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- TEXTO DEL ENCABEZADO -->
+                <div>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-widest accent-text">EDGAR B. LOMAS</h1>
+                    <h2 class="text-xl sm:text-2xl mt-1 font-light text-gray-300">
+                        Ingeniero Desarrollador Web Full-Stack | Técnico Mecánico Industrial
+                    </h2>
+                    <p class="mt-4 text-sm sm:text-base text-gray-400">
+                        Profesional **Dual-Core** con 5 años en ingeniería de software y 3 años de experiencia crítica en entornos industriales. Mi visión fusiona la lógica de código con la precisión de la mecánica, ideal para proyectos de **Industria 4.0** y automatización inteligente.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL (Dividido en dos columnas en escritorio) -->
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-6 sm:p-10">
+
+            <!-- COLUMNA LATERAL (Contactos y Habilidades) -->
+            <section class="lg:col-span-1 space-y-8">
+                
+                <!-- CONTACTO -->
+                <div>
+                    <h3 class="section-title text-lg mb-4 text-gray-300">Contacto</h3>
+                    <ul class="space-y-3 text-sm font-mono">
+                        <li class="flex items-center">
+                            <span class="accent-text w-5 mr-3">📧</span>
+                            <a href="mailto:david.gomez@email.com" class="hover:underline hover:accent-text">edgarballeza10@gmail.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="accent-text w-5 mr-3">📱</span>
+                            <span>8123384579</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="accent-text w-5 mr-3">🔗</span>
+                            <a href="#" class="hover:underline hover:accent-text" target="_blank">-</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="accent-text w-5 mr-3">💻</span>
+                            <a href="#" class="hover:underline hover:accent-text" target="_blank">github.com/mrlomasba</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="accent-text w-5 mr-3">📍</span>
+                            <span>Mexico, Monterrey</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- HABILIDADES TÉCNICAS (Skills) -->
+                <div>
+                    <h3 class="section-title text-lg mb-4 text-gray-300">Habilidades Técnicas</h3>
+                    <div class="space-y-4 text-sm">
+                        <!-- Bloque de Web Development -->
+                        <div class="experience-card p-3 rounded-lg">
+                            <h4 class="font-bold mb-2 accent-text">Módulo Web (Code Logic)</h4>
+                            <ul class="list-disc list-inside space-y-1 ml-2 text-gray-300">
+                                <li>JavaScript (ES6+), TypeScript</li>
+                                <li>Frontend: React.js, Next.js, HTML5, Tailwind CSS</li>
+                                <li>Backend: Node.js, Express, Python (Django)</li>
+                                <li>Bases de Datos: PostgreSQL, MongoDB, SQL Server</li>
+                                <li>Control de Versiones: Git, GitHub/GitLab</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Bloque de Habilidades Industriales -->
+                        <div class="experience-card p-3 rounded-lg">
+                            <h4 class="font-bold mb-2 industrial-text">Módulo Industrial (Hardware & Ops)</h4>
+                            <ul class="list-disc list-inside space-y-1 ml-2 text-gray-300">
+                                <li>Soldadura: TIG, MIG/MAG (Certificado nivel III)</li>
+                                <li>Mecánica: Mantenimiento Preventivo y Correctivo de Maquinaria Pesada.</li>
+                                <li>Herramientas: Uso experto de herramientas de taller (torno, fresadora, corte por plasma).</li>
+                                <li>Gestión Administrativa: Control de inventario, entrada y salida de facturas (SAP/ERP).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDIOMAS -->
+                <div>
+                    <h3 class="section-title text-lg mb-4 text-gray-300">Idiomas</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>Español: Nativo </li>
+                        <li>Inglés: Técnico </li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- COLUMNA PRINCIPAL (Experiencia y Formación) -->
+            <section class="lg:col-span-2 space-y-8">
+
+                <!-- EXPERIENCIA LABORAL (Experience) -->
+                <div>
+                    <h3 class="section-title text-xl mb-4 text-gray-300">Historial de Experiencia</h3>
+                    
+                    <!-- Experiencia Web Dev -->
+                    <div class="relative pl-6 pb-8 border-l-2 border-primary-color/50">
+                        <span class="absolute -left-2 top-0 h-4 w-4 bg-primary-color rounded-full shadow-md" style="box-shadow: var(--glow-shadow);"></span>
+                        <div class="experience-card p-4 rounded-lg shadow-lg">
+                            <span class="dual-tag web-tag">💻 CORE: Web Development</span>
+                            <h4 class="text-lg font-bold mt-1 accent-text">Desarrollador Full-Stack Senior</h4>
+                            <p class="text-sm font-semibold text-gray-400 font-mono">TechInnovate Solutions | 2021 – Actualidad</p>
+                            <ul class="list-disc ml-5 mt-3 text-gray-300 space-y-1 text-sm">
+                                <li>Liderazgo en el desarrollo de la arquitectura de microservicios usando Node.js y React.</li>
+                                <li>Implementación de pipelines CI/CD y optimización de rendimiento, **reduciendo la latencia en un 25%** mediante refactorización.</li>
+                                <li>Diseño y gestión de bases de datos PostgreSQL para alta disponibilidad y escalabilidad (más de 1M de registros).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experiencia Industrial -->
+                    <div class="relative pl-6 pb-8 border-l-2 border-secondary-accent/50">
+                        <span class="absolute -left-2 top-0 h-4 w-4 bg-secondary-accent rounded-full shadow-md"></span>
+                        <div class="experience-card p-4 rounded-lg shadow-lg">
+                            <span class="dual-tag mech-tag">⚙️ CORE: Industrial Ops</span>
+                            <h4 class="text-lg font-bold mt-1 industrial-text">Técnico Mecánico y Soldador Industrial</h4>
+                            <p class="text-sm font-semibold text-gray-400 font-mono">Mecánica Avanzada S.L. | 2018 – 2021</p>
+                            <ul class="list-disc ml-5 mt-3 text-gray-300 space-y-1 text-sm">
+                                <li>Realización de trabajos de soldadura de precisión (TIG, Acero Inoxidable) en estructuras críticas y maquinaria pesada.</li>
+                                <li>Diagnóstico y reparación de fallas mecánicas e hidráulicas, **asegurando la continuidad operativa (98% de disponibilidad)**.</li>
+                                <li>Responsable del control de inventario de piezas de recambio y del proceso de entrada/salida de facturas de proveedores.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORMACIÓN (Education) -->
+                <div>
+                    <h3 class="section-title text-xl mb-4 text-gray-300">Formación y Certificaciones</h3>
+                    
+                    <div class="experience-card p-4 rounded-lg shadow-lg space-y-4">
+                        <div class="border-b border-gray-700 pb-2">
+                            <h4 class="text-lg font-bold accent-text">Grado en Ingeniería de Software</h4>
+                            <p class="text-sm text-gray-400 font-mono">Universidad Tecnologica Santa Catarina (UTSC) | 2021 – 2024</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold industrial-text">Técnico Superior en Mecanica Industrial</h4>
+                            <p class="text-sm text-gray-400 font-mono">Cetis 66 | </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- FOOTER (Pie de página) -->
+        <footer class="text-center p-4 text-xs border-t-2 border-primary-color/50 text-gray-500 header-bg font-mono">
+            // STATUS: PROFILE ACTIVE & OPTIMIZED // &copy; <span id="current-year"></span> Edgar B. Lomas.
+        </footer>
+    </div>
+
+    <!-- JavaScript para actualizar el año automáticamente -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const currentYearSpan = document.getElementById('current-year');
+            const currentYear = new Date().getFullYear();
+            if (currentYearSpan) {
+                currentYearSpan.textContent = currentYear;
+            }
+        });
+    </script>
+</body>
+</html>
